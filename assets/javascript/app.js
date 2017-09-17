@@ -102,7 +102,7 @@ function run(){
 
 function increment(){
       number--
-      document.getElementById('timer').innerHTML = ('<h3>' + number + '</h3>')
+      document.getElementById('timer').innerHTML = ( number )
       if (number === 0){
    		stop();
    		$('#timer').hide();
