@@ -4,7 +4,7 @@ var rightAnswer = 0;
 var wrongAnswer = 0;
 var arrayCounter = 0;
 var number = 120;
-
+//Objects of Questions
 var questionOb = [
 
 	{
@@ -71,16 +71,16 @@ var questionOb = [
 	},
 ];
 
-// SHOWS QUESTION AND MULTIPLE CHOICE ANSWERS AFTER YOU CLICK 'START' OR CLICK RADIO BUTTON
+//Shows Questions when Start
 function showQuestion() {
 	$('.question').html(questionOb[arrayCounter].question);
-	$('.choices').html("<li><input type='radio' name='optradio'>" + "<p>" + 
-		questionOb[arrayCounter].choice1 + "</p>" + "</li><li><input type='radio' name='optradio'>" + "<p>" + 
-		questionOb[arrayCounter].choice2 + "</p>" + "</li><li><input type='radio' name='optradio' value='correct'>"  + "<p>" + 
-		questionOb[arrayCounter].choiceCorrect + "</p>" + "</li>");
+	$('.choices').html("<input type='radio' name='optradio'>" + "<p>" + 
+		questionOb[arrayCounter].choice1 + "</p>" + "<input type='radio' name='optradio'>" + "<p>" + 
+		questionOb[arrayCounter].choice2 + "</p>" + "<input type='radio' name='optradio' value='correct'>"  + "<p>" + 
+		questionOb[arrayCounter].choiceCorrect + "</p>");
 }
 
-// SHOWS RESULT OF THE GAME AFTER ALL QUESTIONS ARE ANSWERED
+//Results
 function showResults() {
 	var percent = rightAnswer / questionOb.length * 100;
 	var percentage = percent.toFixed(0);
@@ -90,7 +90,7 @@ function showResults() {
 		"</p><br>" + "<p> Correct: " + percentage + "%</p>")
 }
 
-// STARTS TIMER
+// Start Timer Counter
 function run(){
       counter = setInterval(increment, 1000);
     }
@@ -100,7 +100,6 @@ function increment(){
       number--
       document.getElementById('timer').innerHTML = ('<h3>' + number + '</h3>')
       if (number === 0){
-        // alert("the end");
    		stop();
    		$('#timer').hide();
    		showResults();
@@ -111,28 +110,25 @@ function stop(){
       clearInterval(counter);
     }
 
-// BEGINS GAME WHEN START BUTTON IS CLICKED
+//Start Button
 $('.start').click(function() {
-	// alert("test");
+	alert("You have 2 Minutes to Complete");
 	run();
 	showQuestion();
 	$('.start').hide();
 });
 
 
-// CATCHED RADIO BUTTON CLICK AND DETERMINES IF THE ANSWER IS RIGHT OR WRONG AND KEEPS TALLY
+//Score Counter
 $('.choices').on('change', function() {
    if($('input[name=optradio]:checked', '.choices').val() == 'correct') {
-   	// alert("that's correct");
    	rightAnswer ++;
    } else {
-   	// alert("wrong!");
    	wrongAnswer ++;
    }; 
    arrayCounter ++;
 
    if(arrayCounter == questionOb.length) {
-   		// alert("the end");
    		stop();
    		$('#timer').hide();
    		showResults();
