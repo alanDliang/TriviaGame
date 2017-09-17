@@ -24,8 +24,9 @@ var questionOb = [
 	{
 		question: "A 17-year-old boy presents to the emergency room with severe bleeding from his right hand. He was involved in a gang fight an hour ago where he received a penetrating stab wound by a sharp knife in the region of the 'anatomical snuff box'. Damage to which artery is most likely responsible for this excessive bleeding?",
 		choice1: "Ulnar artery",
-		choice2: "Anterior carpal arch",
-		choiceCorrect: "Radial Artery"
+		choiceCorrect: "Radial Artery",
+		choice2: "Anterior carpal arch"
+		
 	},
 
 	{
@@ -37,9 +38,10 @@ var questionOb = [
 
 	{
 		question: "A 25-year-old male comes to his physician for a follow-up visit with weakness of his right hand. Two months ago, he suffered a motor vehicle accident in which his right hand was injured. On examination, he is unable to flex the metacarpophalangeal joints of the ring and index finger and is unable to adduct these fingers. Which of the following muscles are most likely paralyzed?",
+		choiceCorrect: "Palmar interossei muscles",
 		choice1: "Dorsal interossei muscles",
-		choice2: "Extensor digitorum",
-		choiceCorrect: "Palmar interossei muscles"
+		choice2: "Extensor digitorum"
+		
 	},
 
 	{
@@ -52,15 +54,17 @@ var questionOb = [
 	{
 		question: "A 38-year-old female had an enlarged thyroid gland compressing the trachea. A partial thyroidectomy was suggested. During surgery, the young surgeon ligated the inferior thyroid arteries as close to the poles as possible to prevent intraoperative hemorrhage. After 14 days, the patient presents with persistent hoarseness of voice. The most likely cause could be:",
 		choice1: "External laryngeal nerve damage",
-		choice2: "Phrenic nerve damage",
-		choiceCorrect: "Recurrent laryngeal nerve damage"
+		choiceCorrect: "Recurrent laryngeal nerve damage",
+		choice2: "Phrenic nerve damage"
+		
 	},
 
 	{
 		question: "A 39-year-old male presents with painless swelling of the right testes and sensation of heaviness. Physical exam reveals an intra-testicular solid mass that cannot be felt separately from the testis. After evaluation, he was diagnosed with testicular seminoma. Which of the following group of lymph nodes are most likely to be involved?",
+		choiceCorrect: "Para-aortic lymph nodes",
 		choice1: "Para-rectal lymph nodes",
-		choice2: "Deep inguinal lymph nodes",
-		choiceCorrect: "Para-aortic lymph nodes"
+		choice2: "Deep inguinal lymph nodes"
+		
 	},
 
 	{
